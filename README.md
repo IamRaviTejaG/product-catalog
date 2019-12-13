@@ -4,20 +4,18 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
 
 ## Contents
-- [Product Catalog](#product-catalog)
-  - [Contents](#contents)
-    - [Getting Started](#getting-started)
-    - [Dependencies &amp; Packages](#dependencies-amp-packages)
-    - [Running locally](#running-locally)
-      - [The .env file](#the-env-file)
-      - [npm scripts](#npm-scripts)
-    - [API endpoints](#api-endpoints)
-      - [1. /insert](#1-insert)
-      - [2. /search](#2-search)
-        - [2.1. By name (/search/name/:searchQuery)](#21-by-name-searchnamesearchquery)
-        - [2.2. By brandName (/search/brand/:searchQuery)](#22-by-brandname-searchbrandsearchquery)
-        - [2.3. By category (/search/category/:searchQuery)](#23-by-category-searchcategorysearchquery)
-      - [3. /update](#3-update)
+- [Getting Started](#getting-started)
+- [Dependencies &amp; Packages](#dependencies-amp-packages)
+- [Running locally](#running-locally)
+  - [The .env file](#the-env-file)
+  - [npm scripts](#npm-scripts)
+- [API endpoints](#api-endpoints)
+  - [1. /insert](#1-insert)
+  - [2. /search](#2-search)
+    - [2.1. By name (/search/name/:searchQuery)](#21-by-name-searchnamesearchquery)
+    - [2.2. By brandName (/search/brand/:searchQuery)](#22-by-brandname-searchbrandsearchquery)
+    - [2.3. By category (/search/category/:searchQuery)](#23-by-category-searchcategorysearchquery)
+  - [3. /update](#3-update)
 
 ### Getting Started
 Start by cloning the repository using: `git clone https://github.com/IamRaviTejaG/product-catalog.git` followed by `cd product-catalog`.
