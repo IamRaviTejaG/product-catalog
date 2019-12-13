@@ -1,6 +1,6 @@
 # Product Catalog
 
-[![Build Status](https://travis-ci.org/ImRaviTejaG/SocialCops.svg?branch=master)](https://travis-ci.org/IamRaviTejaG/product-catalog)
+[![Build Status](https://travis-ci.org/IamRaviTejaG/product-catalog.svg?branch=master)](https://travis-ci.org/IamRaviTejaG/product-catalog)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
 
 ## Contents
@@ -105,6 +105,5 @@ Data parameters: category
 #### 3. `/update`
 ```
 Request type: PATCH
-Data parameters: Body & Patch Object (as per JSON Patch specs)
-Headers: x-jwt-token
+Data parameters: newName, newCategory, newBrandName, newImages
 ```
