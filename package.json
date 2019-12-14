@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "coverage": "nyc --reporter=text mocha --require @babel/register --timeout 5000 --exit",
     "linter": "standard --fix",
     "start": "npm run build && node dist/index.js --no-deprecation",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require @babel/register --timeout 5000 --exit"
   },
   "keywords": [
     "REST",
@@ -30,6 +31,11 @@
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
     "rimraf": "^3.0.0",
     "standard": "^14.3.1"
   },
@@ -40,5 +46,10 @@
   "bugs": {
     "url": "https://github.com/IamRaviTejaG/product-catalog/issues"
   },
-  "homepage": "https://github.com/IamRaviTejaG/product-catalog#readme"
+  "homepage": "https://github.com/IamRaviTejaG/product-catalog#readme",
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
 }

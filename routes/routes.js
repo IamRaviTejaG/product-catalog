@@ -1,10 +1,21 @@
 import insertionCtrl from '../controllers/insertionCtrl'
+import removeCtrl from '../controllers/removeCtrl'
 import searchCtrl from '../controllers/searchCtrl'
+import updateCtrl from '../controllers/updateCtrl'
 
 const routes = (router) => {
+  // Insertion routes
   router.route('/insert')
     .post(insertionCtrl.insertValue)
 
+  // Deletion routes
+  router.route('/delete/byId/:id')
+    .get(removeCtrl.removeValueById)
+
+  router.route('/delete/byName/:name')
+    .get(removeCtrl.removeValueByName)
+
+  // Search routes
   router.route('/search/brand/:searchQuery')
     .get(searchCtrl.searchByBrand)
 
@@ -14,9 +25,12 @@ const routes = (router) => {
   router.route('/search/name/:searchQuery')
     .get(searchCtrl.searchByName)
 
-  // TODO; Uncomment when the controller is functional.
-  // router.route('/update')
-  //   .put(updateCtrl.updateValue)
+  // Updation routes
+  router.route('/update/byId/:id')
+    .put(updateCtrl.updateValueById)
+
+  router.route('/update/byName/:name')
+    .put(updateCtrl.updateValueByName)
 }
 
 export default routes

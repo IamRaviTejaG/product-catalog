@@ -6,7 +6,8 @@ const dbURL = `mongodb://${process.env.MONGO_URL}:${process.env.MONGO_PORT}/${pr
 const dbOptions = {
   useNewUrlParser: true,
   useCreateIndex: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 }
 
 mongoose.connect(dbURL, dbOptions).then(() => {

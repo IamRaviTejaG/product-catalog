@@ -23,6 +23,8 @@ export default {
       } else {
         res.status(403).json({ message: 'Name should be unique!' })
       }
+    }).catch(err => {
+      res.status(500).json({ error: err })
     })
   }
 }
