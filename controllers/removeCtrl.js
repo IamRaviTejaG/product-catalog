@@ -3,6 +3,11 @@ const itemSchema = require('../schema/itemSchema')
 const ItemModel = dbConnection.model('item', itemSchema)
 
 export default {
+  /**
+   * Handles the deletion of data.
+   * @param  req
+   * @param  res
+   */
   removeValue: (req, res) => {
     ItemModel.deleteOne({ name: req.params.name }).then(result => {
       if (!result.n) {

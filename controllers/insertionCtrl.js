@@ -3,6 +3,11 @@ const itemSchema = require('../schema/itemSchema')
 const ItemModel = dbConnection.model('item', itemSchema)
 
 export default {
+  /**
+   * Handles the insertion of new data.
+   * @param  req
+   * @param  res
+   */
   insertValue: (req, res) => {
     // First check for an existing entry with the same name, as name is unique.
     // If results are found, throw error, else insert new values.
