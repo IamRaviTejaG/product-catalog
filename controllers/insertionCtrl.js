@@ -11,20 +11,16 @@ export default {
         const itemData = new ItemModel({
           name: req.body.name,
           category: req.body.category,
-          brandName: req.body.brandname,
+          brandname: req.body.brandname,
           images: req.body.images
         })
 
         itemData.save().then(result => {
           res.status(200).json({ message: 'Data inserted successfully!', result })
-        }).catch(err => {
-          res.status(500).json({ error: err })
         })
       } else {
-        res.status(403).json({ message: 'Name should be unique!' })
+        res.status(200).json({ message: 'Name should be unique!' })
       }
-    }).catch(err => {
-      res.status(500).json({ error: err })
     })
   }
 }

@@ -1,7 +1,6 @@
 # Product Catalog
 
-[![Build Status](https://travis-ci.org/IamRaviTejaG/product-catalog.svg?branch=master)](https://travis-ci.org/IamRaviTejaG/product-catalog)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
+[![Build Status](https://travis-ci.org/IamRaviTejaG/product-catalog.svg?branch=master)](https://travis-ci.org/IamRaviTejaG/product-catalog) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
 
 ## Contents
 - [Getting Started](#getting-started)
@@ -16,11 +15,15 @@
     - [2.2. By brandName (/search/brand/:searchQuery)](#22-by-brandname-searchbrandsearchquery)
     - [2.3. By category (/search/category/:searchQuery)](#23-by-category-searchcategorysearchquery)
   - [3. /update](#3-update)
+    - [3.1. By id (/update/byId/:id)](#31-by-id-updatebyidid)
+    - [3.2. By name (/update/byName/:name)](#32-by-name-updatebynamename)
+  - [4. /delete](#4-delete)
+    - [4.1. By name (/delete/:name)](#32-by-name-deletebynamename)
 
 ### Getting Started
 Start by cloning the repository using: `git clone https://github.com/IamRaviTejaG/product-catalog.git` followed by `cd product-catalog`.
 
-Install all the dependencies using the `npm install` or `npm i` command. Optionally, use the `--only=dev` flag to install developer dependencies only. Once the dependencies are installed, use `npm start` to start the server.
+Install all the dependencies (including the dev dependencies) using the `npm install` or `npm i` command. Once the dependencies are installed, use `npm start` to start the server.
 
 Use an API testing tool like [Postman](https://www.getpostman.com/downloads/) or [Insomnia](https://insomnia.rest/download/) to send/receive HTTP requests.
 
@@ -47,7 +50,7 @@ Developer dependencies:
 
 ### Running locally
 #### The `.env` file
-The `.env` file holds the important variables for the whole application which include the database URL, database port, application port, JWT Secret, etc.
+The `.env` file holds the important variables for the whole application which include the database URL, database port, application port, etc.
 
 **NOTE**: When running tests, make sure to point the `MONGO_URL` at the test database in order to avoid garbage collection in the main database.
 
@@ -101,7 +104,21 @@ Data parameters: category
 ```
 
 #### 3. `/update`
+##### 3.1. By id (/update/byId/:id)
 ```
-Request type: PATCH
+Request type: PUT
 Data parameters: newName, newCategory, newBrandName, newImages
+```
+
+##### 3.2. By name (/update/byName/:name)
+```
+Request type: PUT
+Data parameters: newName, newCategory, newBrandName, newImages
+```
+
+#### 4. `/delete`
+##### 4.1. By name (/delete/:name)
+```
+Request type: GET
+Data parameters: name
 ```

@@ -18,7 +18,7 @@ const itemSchema = {
     select: true,
     trim: true
   },
-  brandName: {
+  brandname: {
     type: String,
     unique: false,
     select: true,

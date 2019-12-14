@@ -10,12 +10,6 @@ const dbOptions = {
   useFindAndModify: false
 }
 
-mongoose.connect(dbURL, dbOptions).then(() => {
-  console.log('Connection to DB established!')
-}).catch(e => {
-  console.log(`Couldn't connect to DB! Error: ${e}`)
-})
-
-const dbConnection = mongoose.connection
+const dbConnection = mongoose.createConnection(dbURL, dbOptions)
 
 export default dbConnection

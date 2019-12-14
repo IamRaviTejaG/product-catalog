@@ -8,10 +8,8 @@ export default {
       if (!result.n) {
         res.status(200).json({ message: 'No matching entry was found!' })
       } else {
-        res.status(200).json({ message: 'Updated successsfully!' })
+        res.status(200).json({ message: 'Updated successfully!' })
       }
-    }).catch(err => {
-      res.status(500).json({ error: err })
     })
   },
 
@@ -20,10 +18,8 @@ export default {
       if (!result.n) {
         res.status(200).json({ message: 'No matching entry was found!' })
       } else {
-        res.status(200).json({ message: 'Updated successsfully!' })
+        res.status(200).json({ message: 'Updated successfully!' })
       }
-    }).catch(err => {
-      res.status(500).json({ error: err })
     })
   }
 }

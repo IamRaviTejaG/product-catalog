@@ -4,14 +4,12 @@ const ItemModel = dbConnection.model('item', itemSchema)
 
 export default {
   searchByBrand: (req, res) => {
-    ItemModel.find({ brandName: req.params.searchQuery }).then(result => {
+    ItemModel.find({ brandname: req.params.searchQuery }).then(result => {
       if (!result.length) {
         res.status(200).json({ message: 'No results found!' })
       } else {
         res.status(200).json({ result })
       }
-    }).catch(err => {
-      res.status(500).json({ error: err })
     })
   },
 
@@ -22,8 +20,6 @@ export default {
       } else {
         res.status(200).json({ result })
       }
-    }).catch(err => {
-      res.status(500).json({ error: err })
     })
   },
 
@@ -34,8 +30,6 @@ export default {
       } else {
         res.status(200).json({ result })
       }
-    }).catch(err => {
-      res.status(500).json({ error: err })
     })
   }
 }
