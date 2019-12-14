@@ -1,0 +1,33 @@
+{
+  "name": "restful-product-catalog",
+  "version": "1.0.0",
+  "description": "A RESTful API for a product catalog.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js --no-deprecation"
+  },
+  "keywords": [
+    "REST",
+    "Product",
+    "Catalog",
+    "RESTful",
+    "API"
+  ],
+  "author": "Ravi Teja Gannavarapu",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.1",
+    "morgan": "^1.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamRaviTejaG/product-catalog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IamRaviTejaG/product-catalog/issues"
+  },
+  "homepage": "https://github.com/IamRaviTejaG/product-catalog#readme"
+}

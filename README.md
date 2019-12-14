@@ -122,3 +122,6 @@ Data parameters: newName, newCategory, newBrandName, newImages
 Request type: GET
 Data parameters: name
 ```
+
+---
+© 2019 Ravi Teja Gannavarapu
