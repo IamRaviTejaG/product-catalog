@@ -29,6 +29,10 @@ const itemSchema = {
     unique: false,
     select: true,
     trim: true
+  },
+  __v: {
+    type: Number,
+    select: false
   }
 }
 
