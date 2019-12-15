@@ -4,7 +4,7 @@
   "description": "A RESTful API for a product catalog.",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist/ && babel ./ --out-dir dist/",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --copy-files",
     "coverage": "nyc --reporter=text mocha --require @babel/register --timeout 5000 --exit",
     "linter": "standard --fix",
     "start": "npm run build && node dist/index.js --no-deprecation",

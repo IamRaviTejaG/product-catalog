@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/IamRaviTejaG/product-catalog.svg?branch=master)](https://travis-ci.org/IamRaviTejaG/product-catalog) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
 
+The product is live at [Heroku](https://product-catalog-api.herokuapp.com/).
+
 ## Contents
 - [Getting Started](#getting-started)
 - [Dependencies &amp; Packages](#dependencies-amp-packages)
@@ -44,7 +46,7 @@ Developer dependencies:
 - `mocha` (Testing)
 - `nyc` (Test coverage)
 - `request`
-- `request-promise`
+- `request-promise` (For sending HTTP requests to the server while testing)
 - `rimraf` (The UNIX rm -rf command for Node)
 - `standard` (Linting)
 
@@ -52,7 +54,7 @@ Developer dependencies:
 #### The `.env` file
 The `.env` file holds the important variables for the whole application which include the database URL, database port, application port, etc.
 
-**NOTE**: When running tests, make sure to point the `MONGO_URL` at the test database in order to avoid garbage collection in the main database.
+**NOTE**: When running tests, make sure to point the `MONGO_URL` at the test database to avoid garbage collection in the main database.
 
 #### npm scripts
 The `package.json` file contains five scripts for running locally: `linter`, `test`, `coverage`, `build` & `start`.
@@ -69,7 +71,7 @@ Runs **only** the tests.
 
 Runs the test coverage & shows up detailed report.
 
-- `"build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files"`
+- `"build": "rimraf dist/ && babel ./ --out-dir dist/ --copy-files"`
 
 Builds the project.
 
@@ -124,4 +126,4 @@ Data parameters: name
 ```
 
 ---
-© 2019 Ravi Teja Gannavarapu
+##### **_© 2019 Ravi Teja Gannavarapu_**

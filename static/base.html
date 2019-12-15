@@ -23,14 +23,14 @@
 <li class="has-line-data" data-line-start="25" data-line-end="26"><code>mocha</code> (Testing)</li>
 <li class="has-line-data" data-line-start="26" data-line-end="27"><code>nyc</code> (Test coverage)</li>
 <li class="has-line-data" data-line-start="27" data-line-end="28"><code>request</code></li>
-<li class="has-line-data" data-line-start="28" data-line-end="29"><code>request-promise</code></li>
+<li class="has-line-data" data-line-start="28" data-line-end="29"><code>request-promise</code> (For sending HTTP requests to the server while testing)</li>
 <li class="has-line-data" data-line-start="29" data-line-end="30"><code>rimraf</code> (The UNIX rm -rf command for Node)</li>
 <li class="has-line-data" data-line-start="30" data-line-end="32"><code>standard</code> (Linting)</li>
 </ul>
 <h3 class="code-line" data-line-start=32 data-line-end=33 ><a id="Running_locally_32"></a>Running locally</h3>
 <h4 class="code-line" data-line-start=33 data-line-end=34 ><a id="The_env_file_33"></a>The <code>.env</code> file</h4>
 <p class="has-line-data" data-line-start="34" data-line-end="35">The <code>.env</code> file holds the important variables for the whole application which include the database URL, database port, application port, etc.</p>
-<p class="has-line-data" data-line-start="36" data-line-end="37"><strong>NOTE</strong>: When running tests, make sure to point the <code>MONGO_URL</code> at the test database in order to avoid garbage collection in the main database.</p>
+<p class="has-line-data" data-line-start="36" data-line-end="37"><strong>NOTE</strong>: When running tests, make sure to point the <code>MONGO_URL</code> at the test database to avoid garbage collection in the main database.</p>
 <h4 class="code-line" data-line-start=38 data-line-end=39 ><a id="npm_scripts_38"></a>npm scripts</h4>
 <p class="has-line-data" data-line-start="39" data-line-end="40">The <code>package.json</code> file contains five scripts for running locally: <code>linter</code>, <code>test</code>, <code>coverage</code>, <code>build</code> &amp; <code>start</code>.</p>
 <ul>
@@ -85,5 +85,7 @@ Data parameters: newName, newCategory, newBrandName, newImages
 <pre><code class="has-line-data" data-line-start="103" data-line-end="106">Request type: GET
 Data parameters: name
 </code></pre>
+<hr>
+<h6 class="code-line" data-line-start=108 data-line-end=109 ><a id="__2019_Ravi_Teja_Gannavarapu__108"></a><strong><em>© 2019 Ravi Teja Gannavarapu</em></strong></h6>
 
 </body></html>

@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 require('dotenv').config()
 
-const dbURL = `mongodb+srv://heroku:${process.env.MONGO_PASS}@cluster0-l0l9c.mongodb.net/${process.env.MONGO_DBNAME}`
+const dbURL = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASS}@${process.env.MONGO_URL}/${process.env.MONGO_DBNAME}`
 
 const dbOptions = {
   useNewUrlParser: true,
